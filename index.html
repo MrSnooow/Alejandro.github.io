@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="src/venobox.css" type="text/css" media="screen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Momo+Trust+Display&family=Sixtyfour&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/303b30e66f.js" crossorigin="anonymous"></script>
+	<title>Porfolio</title>
+	<style type="text/css">
+
+	*{
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		scroll-behavior: smooth;
+		font-family: "Momo Trust Display", sans-serif;
+	}
+
+	section {
+ 		scroll-margin-top: 10vh;
+		}
+
+		button{
+			font-size: 20px;
+			border-radius: 30px;
+			padding: 5px 10px;
+			margin: 20px 10px 20px 20px;
+
+		}
+
+		button:hover{
+			cursor: pointer;
+			background-color: #808080;
+		}
+
+		header{
+			height:8vh;
+			position: fixed;
+			background-color: black;
+			width: 100%;
+			text-align: center;
+			top: 0;
+			left: 0;
+			z-index: 9999;
+		}
+
+
+
+		nav{
+			margin-top: 30px;
+			text-transform: uppercase;
+		}
+
+		a{
+			text-decoration: none;
+			color: white;
+			padding: 50px;
+		}
+		a:hover{
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		a:visited{
+			text-decoration: none;
+		}
+
+
+
+		
+		.fa-brands, .fa-solid{
+			color: black;
+		}
+		
+		.dr a{
+			padding:0px;
+			font-size: 50px;		
+		}
+
+		#home{
+			margin-top: 8vh;
+			height: auto;
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			align-content: center;
+		}
+
+		#home video{
+			height: auto;
+			width: 100%;
+			object-fit: contain;
+			display: block;
+		}
+
+		.overlay {
+		 	position: absolute;
+ 		 color: white;
+ 		 text-align: center;
+ 		 z-index: 2;
+ 		 top: 0;
+ 		 left: 0;
+ 		 bottom: 0;
+ 		 right: 0;
+ 		 margin-top: 10vh;
+		}
+
+		#aboutme{
+			height: auto;
+			background-color: white;
+			display: block;
+			padding: 5vh 10vh;
+		 }
+
+		#projects{
+			height: auto;
+			background-color: black;
+			padding: 5vh 8vh;
+		 }
+
+
+		.tb{
+			color: white;
+			
+		}
+		.tn{
+			color: black;
+			margin-bottom: 40px;
+		
+
+		}
+
+		.logos{
+			color: black;
+
+		}
+
+		.contenedor{
+
+	display: flex;
+
+		}
+		.contenedor1{
+
+	display: flex;
+
+		}
+
+		.izquierdo{
+			width: 30%;
+			height: 100%;
+			margin-right: 10%;
+			
+		}
+
+			.derecho{
+			width: 70%;
+			height: 80%;
+			float: right;
+		}	
+
+		.iz{
+			margin-top: 20px;
+			width: 40%;
+			border: 2px solid black;
+			border-radius: 20px;
+			padding: 20px;
+			margin-right: 20px;
+		}
+
+		.dr{
+			margin-top: 20px;			
+			width: 40%;
+			float: right;
+			border: 2px solid black;
+			border-radius: 20px;
+			padding: 20px;
+			margin-right: 20px;
+		}
+
+		img{
+			height: 80%;
+			width: 100%;
+		}
+
+		p{
+			margin-top: 10px;
+		
+		}
+		hr{
+			margin-top: 10px;
+		}
+/* Proyectos */
+
+		.venobox img{
+		
+			width: 33%; 
+			line-height: 0;
+		}
+
+		#projects a{
+			padding: 0;
+		}
+
+		#projects h1{
+			margin-bottom: 30px;
+		}
+
+/* Contacto */
+
+
+		input, textarea{
+			color: white;
+			padding: 10px;
+		}
+
+		#contacto{
+			height: auto;
+			padding: 10vh 20% 5vh 20%;
+		}
+
+		.name{
+			width: 49%;
+			height: 4vh;
+			background-color: #000000;
+			border-radius: 7px;
+			border: none;
+		
+		}
+
+		.email{
+			width: 49%;
+			height: 4vh;
+			background-color: #000000;
+			border-radius: 7px;
+			border: none;
+		}
+
+		.mesage{
+			margin-top: 2vh;
+			width: 99%;
+			height: 20vh;
+			
+			background-color: #000000;
+			border-radius: 7px;
+			border: none;
+		}
+		.botones{
+			text-align: center;
+		}
+
+/*Foter*/
+		
+			footer{
+			background-color: black;
+			height: auto;
+			padding: 3vh;
+		}
+
+		.tf{
+			color: white;
+			text-align: center;
+			color:#949494;
+		}
+
+
+@media (max-width: 1200px){
+
+	#aboutme{
+		height: auto;
+		padding:5vh;
+	}
+	.izquierdo{
+		margin-right: 5%;
+	}
+
+ 		.tn{
+	 	margin-bottom: 20px;
+	 	 }
+
+		.derecho{
+			margin-right: 10px;
+		}
+/* Contacto */
+	#contacto{
+		padding: 3vh 20%;
+	}
+
+		.venobox img{
+		
+			width: 49%;}
+
+		.iz, .dr{
+			width: 100%;
+	}
+
+}
+
+@media (max-width: 800px){
+
+	a{
+		font-size: 15px;
+		padding: 25px;
+	}
+
+	.contenedor, .contenedor1 {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+		img{
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			}
+
+	.derecho {
+				width: 100%;
+			}
+
+	 .izquierdo{
+		margin: 0;
+		width: 50%;
+	}
+
+	.iz, .dr{
+		width: 100%;
+	}
+
+  #aboutme{
+  
+ 	height: auto;
+  }
+
+  #aboutme h1{
+  	text-align: center;
+  }
+
+/* Contacto */
+	#contacto{
+		padding: 3vh 10vh;
+	}
+
+	.name{
+		width: 99%;
+		margin-bottom: 20px;
+	}
+
+	.email{
+		width: 99%;
+	}
+
+
+			.venobox img{
+		
+			width: 100%;
+}
+@media (max-width: 525px){
+	a{
+	
+		padding: 15px;
+	}
+
+	#contacto{
+		padding: 2vh;
+	}
+}
+
+	</style>
+
+</head>
+<body>
+<header>
+	<nav>
+		<a href="#home">Inicio</a>
+		<a href="#aboutme">Sobre mi</a>
+		<a href="#projects">Proyectos</a>
+		<a href="#contacto">Contacto</a>
+	</nav>
+</header>
+<section id="home">
+	<video autoplay muted loop playsinline>
+  		<source src="images/Demoreel.mp4" type="video/mp4">
+  		Tu navegador no soporta el video.
+
+ 	</video>
+ 	<div class="overlay">
+<h1 class="tb">¡Hola! Soy Alejandro</h1>
+<p class="tb">Desarrollador multimedia</p>
+	</div>
+</section>
+<section id="aboutme">
+	<h1 class="tn">Sobre Mi</h1>
+	<div class="contenedor1">
+		<div class="izquierdo">
+					<img src="images/yo.jpg" alt="">
+		</div>
+		<div class="derecho">
+		<p>Soy estudiante de animación 3D y modelado, apasionado por crear mundos visuales que transmitan emociones y cuenten historias. Me motiva combinar el arte con la tecnología para dar vida a ideas que inspiren y conecten con las personas.</p>
+		<p>Mi herramienta principal es Blender, donde desarrollo la mayor parte de mis proyectos de modelado, animación y renderizado. También utilizo Adobe Premiere Pro para la edición de video y Sublime Text para programar y dar forma a este mismo portafolio web. Además, trabajo con Unity y Unreal Engine para explorar la creación de experiencias interactivas y proyectos de videojuego.</p>
+		<p>Me apasiona cada etapa del proceso creativo, desde el modelado hasta la puesta en escena final. Disfruto experimentar con nuevas herramientas y estilos visuales para dar vida a mundos y personajes únicos.</p>
+
+		<hr>
+		<p class="h2">⚙️ Habilidades principales</p>
+		<p>-Modelado, animación y renderizado en Blender</p>
+		<p>-Edición y montaje en Adobe Premiere Pro</p>
+		<p>-Programación web básica con HTML, CSS y JavaScript (Sublime Text)</p>
+		<p>-Creación de entornos y experiencias interactivas en Unity y Unreal Engine</p>
+		<div class="contenedor">
+				<div class="iz">
+						<p class="h2">Idiomas</p>
+						<p>-Español nativo</p>
+						<p>-Ingles B2</p>
+				</div>
+				<div class="dr">
+						<p class="h2">Redes</p>
+						<a href="https://www.instagram.com/alegro13_?igsh=d241dnJ1MGhqbmJl"><i class="fa-brands fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/in/alejandro-garrotes-morales-932a35398/"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="mailto:agarmor1306@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="projects">
+	<h1 class="tb">Mis proyectos destacados</h1>
+<a class="venobox" data-gall="galeria1" data-vbtype="video" href="images/Porfolio0001-1000.mp4">
+  <img src="images/Habitación.png" alt="Video 1">
+</a>
+<a class="venobox" data-gall="galeria1" data-vbtype="video" href="images/Voltereta.mp4">
+  <img src="images/Lupamini.png" alt="Video 1">
+</a>
+<a class="venobox" data-gall="galeria1" data-vbtype="video" href="images/Cycles0100-0306.mp4">
+  <img src="images/Chalet miniatura.jpg" alt="Video 1">
+</a>
+<a class="venobox" data-gall="galeria1" data-vbtype="video" href="images/Dino.mp4">
+  <img src="images/Captura de pantalla 2025-11-25 131401.png" alt="Video 1">
+</a>
+<a class="venobox" data-gall="galeria1" data-vbtype="image" href="images/Alejandro_Garrote_Mono2.png">
+  <img src="images/Alejandro_Garrote_Mono2.png" alt="Imagen 1">
+</a>
+<a class="venobox" data-gall="galeria1" data-vbtype="video" href="images/render_01.mp4">
+  <img src="images/Lupa.png" alt="Video 1">
+</a>
+
+
+
+</section>
+<section id=contacto>
+	<h1 class="tn">Contacto</h1>
+	
+	<form class="form" action="#" method="post">
+		<input class="name" type="text" placeholder="Name">
+		<input class="email" type="email" placeholder="Email">
+		<textarea class="mesage" placeholder="Messsage"></textarea>
+		<div class="botones">
+			<button>Enviar</button>
+			<button>Borrar</button>
+	</div>
+	</form>
+</section>
+
+<footer>
+	<p class="tf">| © 2025 Alejandro — Portafolio 3D |</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="VenoBox-master (1)/VenoBox-master/dist/venobox.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.venobox').venobox({
+            'autoplay': true, // Auto-reproducción de video
+            'keyboard': true, // Asegura que el teclado esté activo para la galería
+            navKeyboard: true, // Asegura la navegación entre elementos agrupados
+            navTouch: true,
+            numeration: true
+            });
+        });
+    </script>
+</body>
+</html>
