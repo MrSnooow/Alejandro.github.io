@@ -17,10 +17,11 @@
 		margin: 0;
 		scroll-behavior: smooth;
 		font-family: "Momo Trust Display", sans-serif;
+	
 	}
 
 	section {
- 		scroll-margin-top: 10vh;
+ 		scroll-margin-top: 8vh;
 		}
 
 		button{
@@ -37,31 +38,55 @@
 		}
 
 		header{
-			height:8vh;
+			height: 8vh;
 			position: fixed;
 			background-color: black;
 			width: 100%;
-			text-align: center;
 			top: 0;
 			left: 0;
 			z-index: 9999;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 
 
 		nav{
-			margin-top: 30px;
 			text-transform: uppercase;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
 		}
 
-		a{
+		.nav-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: nowrap;
+			width: 100%;
+			height: 100%;
+		}
+
+		nav a{
 			text-decoration: none;
 			color: white;
-			padding: 50px;
+			padding: 0 25px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+			font-size: 16px;
+			white-space: nowrap;
 		}
-		a:hover{
+		
+		nav a:hover{
 			text-decoration: none;
 			cursor: pointer;
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 
 		a:visited{
@@ -301,9 +326,9 @@
 
 @media (max-width: 800px){
 
-	a{
+	nav a{
 		font-size: 15px;
-		padding: 25px;
+		padding: 0 15px;
 	}
 
 	.contenedor, .contenedor1 {
@@ -353,16 +378,68 @@
 	}
 
 
-			.venobox img{
-		
-			width: 100%;
-}
-@media (max-width: 525px){
-	a{
-	
-		padding: 15px;
+	.venobox img{
+		width: 100%;
 	}
+}
 
+/* Media query para 500px - 2 filas */
+@media (max-width: 500px){
+	header {
+		height: 10vh; /* Total para 2 filas */
+	}
+	
+	nav {
+		flex-direction: column;
+		padding: 0;
+	}
+	
+	.nav-container {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		height: 100%;
+	}
+	
+	nav a {
+		width: 50%;
+		height: 5vh; /* Mitad exacta de la altura total */
+		padding: 0;
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+	}
+	
+	/* Organización específica de las 2 filas */
+	.nav-container a:nth-child(1),
+	.nav-container a:nth-child(2) {
+		/* Primera fila */
+		align-self: flex-start;
+	}
+	
+	.nav-container a:nth-child(3),
+	.nav-container a:nth-child(4) {
+		/* Segunda fila */
+		align-self: flex-end;
+	}
+	
+	/* Ajuste del margen superior de las secciones */
+	#home {
+		margin-top: 16vh;
+	}
+	
+	section {
+		scroll-margin-top: 16vh;
+	}
+}
+
+@media (max-width: 430px){
+	nav a{
+		font-size: 13px;
+	}
+	
 	#contacto{
 		padding: 2vh;
 	}
@@ -374,10 +451,12 @@
 <body>
 <header>
 	<nav>
-		<a href="#home">Inicio</a>
-		<a href="#aboutme">Sobre mi</a>
-		<a href="#projects">Proyectos</a>
-		<a href="#contacto">Contacto</a>
+		<div class="nav-container">
+			<a href="#home">Inicio</a>
+			<a href="#aboutme">Sobre mi</a>
+			<a href="#projects">Proyectos</a>
+			<a href="#contacto">Contacto</a>
+		</div>
 	</nav>
 </header>
 <section id="home">
